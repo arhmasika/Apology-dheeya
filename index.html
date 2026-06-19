@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apology for Sadia</title>
+  <style>
+    body {
+      background: pink;
+      text-align: center;
+      font-family: Arial;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 100px;
+      color: white;
+      font-size: 40px;
+    }
+
+    p {
+      color: white;
+      font-size: 20px;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 30px;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {transform: translateY(-10%);}
+      100% {transform: translateY(110vh);}
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>😢🥺 I'm Sorry Sadia 💔</h1>
+<p>Please forgive me. I never meant to hurt you.</p>
+
+<script>
+const emojis = ["😢","🥺","💔","💖"];
+
+for(let i=0;i<25;i++){
+  let div = document.createElement("div");
+  div.classList.add("emoji");
+  div.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+  div.style.left = Math.random()*100 + "vw";
+  div.style.animationDuration = (3 + Math.random()*5) + "s";
+  document.body.appendChild(div);
+}
+</script>
+
+</body>
+</html>
